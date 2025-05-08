@@ -1,0 +1,364 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.6;
+    color: #333;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1100px; /* Adjust as needed */
+    margin: 0 auto;    /* Centers the container */
+    padding: 0 20px;   /* Adds some padding on the sides */
+}
+
+/* Header Styles */
+header {
+    background-color: #f8f9fa; /* A light background */
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0; /* A subtle bottom border */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00005c; /* Darker blue for "Future" */
+    text-decoration: none;
+}
+
+.logo span.logo-ai {
+    background-color: #ef5da8; /* Pink color */
+    color: white;
+    padding: 3px 9px;
+    border-radius: 14px;
+    font-size: 16px;
+    margin-left: 6px;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #ef5da8; /* Pink color on hover */
+}
+
+.btn {
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.btn-primary {
+    background-color: #ef5da8; /* Pink color */
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #d6408b; /* Darker pink on hover */
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #f0e6f6; /* Light lavender/pinkish background */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #1e2a78; /* Dark blue for most of the headline */
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero h1 .highlight-blue {
+    color: #3b5998; /* Different blue for "Future Baby" */
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.btn-large {
+    padding: 15px 35px;
+    font-size: 18px;
+    border-radius: 30px;
+}
+
+.hero-images {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Space between parent, arrow, and baby images */
+}
+
+.hero-images img { /* Styles for parent and baby images */
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific styles for the arrow image in the hero section */
+div.hero-images img.hero-arrow-image {
+    width: 80px;    /* Adjusted width for the arrow */
+    height: auto;
+    border: none;      /* Remove border from arrow */
+    box-shadow: none;  /* Remove box shadow from arrow */
+    border-radius: 0;  /* Ensure arrow is not made circular */
+    background-color: transparent;
+}
+
+/* How It Works Section Styles */
+.how-it-works {
+    padding: 60px 0;
+    background-color: #fff; /* White background for this section */
+    text-align: center;     /* Center align section content */
+}
+
+.how-it-works h2 {
+    font-size: 36px;
+    color: #1e2a78; /* Dark blue, consistent with hero h1 */
+    margin-bottom: 15px;
+}
+
+.section-subheading { /* General class for subheadings */
+    font-size: 18px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 40px auto; /* Center and add bottom margin */
+    line-height: 1.7;
+}
+
+.steps-visual-wrapper {
+    margin-bottom: 30px; /* Space between the image and the text below */
+    text-align: center; /* Center the image within this wrapper */
+}
+
+.steps-composite-image {
+    max-width: 100%; /* Keeps it responsive if container is smaller */
+    height: auto;
+    display: block; /* Helps with centering if margin auto is used */
+    margin-left: auto; /* Centers the image if its max-width is less than container */
+    margin-right: auto; /* Centers the image */
+    /* If icons.webp is exactly 573px wide, you can add: */
+    /* max-width: 573px; */ /* Uncomment and set if you want to strictly cap its width */
+}
+
+.steps-text-descriptions {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px; /* You can also adjust this gap if needed */
+    text-align: center;
+    margin-top: 20px;
+    max-width: 690px; /* << ADJUSTED VALUE - try values between 680px and 710px */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step-description {
+    flex: 1;
+    max-width: 300px;
+}
+
+.step-description h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.step-description p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}/* Packages Section Styles */
+.packages {
+    padding: 60px 0;
+    background-color: #f8f0fc; /* Light lavender background from design */
+}
+
+.packages h2 { /* Assuming you want similar styling to other section titles */
+    font-size: 36px;
+    color: #1e2a78;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* .packages .section-subheading is already styled globally */
+
+.packages-grid {
+    display: flex;
+    justify-content: center; /* Center cards if they don't fill the space */
+    align-items: stretch; /* Make cards same height if content differs */
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.package-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    flex-basis: 300px; /* Starting width for each card */
+    flex-grow: 1;     /* Allow cards to grow */
+    max-width: 350px; /* Max width for each card */
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column; /* Stack items vertically within card */
+    position: relative; /* For the popular badge */
+    text-align: left; /* Override section's text-align: center for card content */
+}
+
+.package-card.popular {
+    border: 2px solid #ef5da8; /* Pink border for popular card */
+    transform: translateY(-10px); /* Slightly raise the popular card */
+    /* box-shadow: 0 10px 30px rgba(239, 93, 168, 0.3); */ /* Optional: Pinkish shadow */
+}
+
+.popular-badge {
+    background-color: #ef5da8; /* Pink */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 15px 15px 0 0; /* Rounded top corners */
+    position: absolute;
+    top: -28px; /* Position above the card, adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.package-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center; /* Center title within card */
+}
+
+.package-price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1e2a78; /* Dark blue */
+    margin-bottom: 15px;
+    text-align: center; /* Center price within card */
+}
+
+.package-description {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+    min-height: 40px; /* Give some consistent space for description */
+    text-align: center; /* Center description */
+}
+
+.package-features {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+    flex-grow: 1; /* Allows feature list to take up remaining space */
+}
+
+.package-features li {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start; /* Align checkmark and text nicely */
+}
+
+.package-features .checkmark {
+    color: #28a745; /* Green checkmark color */
+    margin-right: 8px;
+    font-weight: bold; /* Make checkmark a bit bolder */
+    line-height: 1.2; /* Adjust vertical alignment of checkmark with text */
+}
+
+.package-card .btn {
+    width: 100%; /* Make button full width of card padding */
+    margin-top: auto; /* Pushes button to bottom if card is flex column */
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* New Button Styles */
+.btn-outline {
+    background-color: #fff;
+    color: #ef5da8; /* Pink text */
+    border: 2px solid #ef5da8; /* Pink border */
+}
+
+.btn-outline:hover {
+    background-color: #fdf spezifischeeff; /* Very light pink */
+    color: #d6408b; /* Darker pink text */
+    border-color: #d6408b;
+}
+
+.btn-secondary { /* Blue button for Deluxe */
+    background-color: #3b5998; /* Blue color from hero text */
+    color: white;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #2d4373; /* Darker blue */
+}
+
+.package-note {
+    font-size: 13px;
+    color: #777;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.package-note .star-icon {
+    color: #ffc107; /* Yellow star color */
+    margin-right: 5px;
+    font-size: 14px;
+}

@@ -1,0 +1,863 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.6;
+    color: #333;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1100px; /* Adjust as needed */
+    margin: 0 auto;    /* Centers the container */
+    padding: 0 20px;   /* Adds some padding on the sides */
+}
+
+/* Hamburger Menu Icon Base Styles */
+.hamburger-menu {
+    display: none; /* Hidden by default on desktop, will be shown in media query */
+    background: none; /* Remove default button background */
+    border: none;     /* Remove default button border */
+    cursor: pointer;  /* Show pointer cursor */
+    padding: 10px;    /* Add some padding to make it easier to click */
+    z-index: 1001;    /* High z-index to ensure it's on top */
+    /* Remove position:relative from here, we'll handle positioning in media query */
+}
+
+.hamburger-bar {
+    display: block;    /* Make each bar take its own line */
+    width: 25px;       /* Width of each bar */
+    height: 3px;       /* Thickness of each bar */
+    background-color: #333; /* Color of the bars (dark grey) */
+    margin: 5px 0;     /* Space between the bars (5px top/bottom, 0 left/right) */
+    transition: all 0.3s ease-in-out; /* For smooth animation to X later */
+}
+
+/* Hamburger "X" (Active State) Styles */
+.hamburger-menu.is-active .hamburger-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.is-active .hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.is-active .hamburger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+/* Header Styles */
+header {
+    background-color: #f8f9fa; /* A light background */
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0; /* A subtle bottom border */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00005c; /* Darker blue for "Future" */
+    text-decoration: none;
+}
+
+.logo span.logo-ai {
+    background-color: #ef5da8; /* Pink color */
+    color: white;
+    padding: 3px 9px;
+    border-radius: 14px;
+    font-size: 16px;
+    margin-left: 6px;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #ef5da8; /* Pink color on hover */
+}
+
+.btn {
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    /* MODIFIED/EXPANDED TRANSITION PROPERTY: */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ef5da8; /* Pink color */
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #d6408b; /* Darker pink on hover */
+    transform: translateY(-2px) scale(1.01); /* EXPLICITLY ADDED */
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #f0e6f6; /* Light lavender/pinkish background */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #1e2a78; /* Dark blue for most of the headline */
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero h1 .highlight-blue {
+    color: #3b5998; /* Different blue for "Future Baby" */
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.hero .btn-large:hover { /* Make it specific to hero button */
+    transform: translateY(-3px) scale(1.03); /* Moves up slightly and scales up */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Optional: enhance shadow on hover */
+}
+
+.hero-images {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Space between parent, arrow, and baby images */
+}
+
+.hero-images img { /* Styles for parent and baby images */
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* <<< ADD THIS LINE */
+}
+
+.hero-images img:hover {
+    transform: scale(1.05); /* Scale up by 5% */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow */
+}
+/* Specific styles for the arrow image in the hero section */
+div.hero-images img.hero-arrow-image {
+    width: 80px;    /* Adjusted width for the arrow */
+    height: auto;
+    border: none;      /* Remove border from arrow */
+    box-shadow: none;  /* Remove box shadow from arrow */
+    border-radius: 0;  /* Ensure arrow is not made circular */
+    background-color: transparent;
+}
+
+/* How It Works Section Styles */
+.how-it-works {
+    padding: 60px 0;
+    background-color: #fff; /* White background for this section */
+    text-align: center;     /* Center align section content */
+}
+
+.how-it-works h2 {
+    font-size: 36px;
+    color: #1e2a78; /* Dark blue, consistent with hero h1 */
+    margin-bottom: 15px;
+}
+
+.section-subheading { /* General class for subheadings */
+    font-size: 18px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 40px auto; /* Center and add bottom margin */
+    line-height: 1.7;
+}
+
+.steps-visual-wrapper {
+    margin-bottom: 30px; /* Space between the image and the text below */
+    text-align: center; /* Center the image within this wrapper */
+}
+
+.steps-composite-image { /* Your image with 3 icons and line */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: 573px; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* <<< ADD THIS LINE */
+}
+
+.steps-composite-image:hover {
+    transform: translateY(-5px); /* Lift up by 5 pixels */
+    /* Optional: Add a subtle shadow if you like the effect */
+    /* box-shadow: 0 8px 15px rgba(0,0,0,0.07); */
+}
+
+.steps-text-descriptions {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px; /* You can also adjust this gap if needed */
+    text-align: center;
+    margin-top: 20px;
+    max-width: 690px; /* << ADJUSTED VALUE - try values between 680px and 710px */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step-description {
+    flex: 1;
+    max-width: 300px; /* Or your adjusted width */
+    padding: 15px; /* Optional: Add if you want a background/border effect to look better */
+    border-radius: 8px; /* Optional: For rounded corners if using background/border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* <<< ADD/MODIFY THIS LINE */
+}
+
+.step-description:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* MODIFIED for more visibility */
+    /* background-color: #f9f9f9; */
+}
+
+.step-description h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.step-description p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}/* Packages Section Styles */
+.packages {
+    padding: 60px 0;
+    background-color: #f8f0fc; /* Light lavender background from design */
+}
+
+.packages h2 { /* Assuming you want similar styling to other section titles */
+    font-size: 36px;
+    color: #1e2a78;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* .packages .section-subheading is already styled globally */
+
+.packages-grid {
+    display: flex;
+    justify-content: center; /* Center cards if they don't fill the space */
+    align-items: stretch; /* Make cards same height if content differs */
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.package-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    flex-basis: 300px; /* Starting width for each card */
+    flex-grow: 1;     /* Allow cards to grow */
+    max-width: 350px; /* Max width for each card */
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column; /* Stack items vertically within card */
+    position: relative; /* For the popular badge */
+    text-align: left; /* Override section's text-align: center for card content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:not(.popular):hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2); /* MODIFIED: Darker shadow */
+}
+
+.package-card.popular:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25); /* MODIFIED: General darker shadow */
+}
+
+.popular-badge {
+    background-color: #ef5da8; /* Pink */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 15px 15px 0 0; /* Rounded top corners */
+    position: absolute;
+    top: -28px; /* Position above the card, adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.package-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center; /* Center title within card */
+}
+
+.package-price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1e2a78; /* Dark blue */
+    margin-bottom: 15px;
+    text-align: center; /* Center price within card */
+}
+
+.package-description {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+    min-height: 40px; /* Give some consistent space for description */
+    text-align: center; /* Center description */
+}
+
+.package-features {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+    flex-grow: 1; /* Allows feature list to take up remaining space */
+}
+
+.package-features li {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start; /* Align checkmark and text nicely */
+}
+
+.package-features .checkmark {
+    color: #28a745; /* Green checkmark color */
+    margin-right: 8px;
+    font-weight: bold; /* Make checkmark a bit bolder */
+    line-height: 1.2; /* Adjust vertical alignment of checkmark with text */
+}
+
+.package-card .btn {
+    width: 100%; /* Make button full width of card padding */
+    margin-top: auto; /* Pushes button to bottom if card is flex column */
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* New Button Styles */
+.btn-outline {
+    background-color: #fff;
+    color: #ef5da8; /* Pink text */
+    border: 2px solid #ef5da8; /* Pink border */
+}
+
+.btn-outline:hover {
+    background-color: #fff0f5; /* LavenderBlush - a very light pink */
+    color: #d6408b; /* Darker pink text */
+    border-color: #d6408b; /* Darker pink border */
+}
+
+.btn-secondary {
+    background-color: #3b5998;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #2d4373; /* Darker blue/purple */
+    transform: translateY(-2px) scale(1.01);
+    color: white; /* <<< ADD THIS LINE to make text white on hover */
+}
+
+.btn-secondary:hover {
+    background-color: #2d4373; /* Darker blue */
+}
+
+.btn:hover {
+    transform: translateY(-2px) scale(1.01); /* Subtle lift and scale */
+    /* You can add a general subtle shadow increase for all buttons if desired */
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
+}
+
+.package-note {
+    font-size: 13px;
+    color: #777;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.package-note .star-icon {
+    color: #ffc107; /* Yellow star color */
+    margin-right: 5px;
+    font-size: 14px;
+}
+/* =================================== */
+/*           MEDIA QUERIES             */
+/* =================================== */
+
+/* Medium screens (e.g., tablets, smaller desktops) - Breakpoint: 992px */
+@media (max-width: 992px) {
+    .container {
+        max-width: 90%; /* Allow container to be a bit more fluid */
+    }
+
+    /* You might adjust some larger font sizes or paddings here if needed */
+}
+
+
+/* Small screens (e.g., tablets in portrait, large phones in landscape) - Breakpoint: 768px */
+@media (max-width: 768px) {
+    /* Header Adjustments */
+    header .container {
+        /* ... any existing styles like display:flex, justify-content ... */
+        /* If you don't have a rule for header .container here yet, you might not need to add it
+           unless you specifically need to change its properties for mobile,
+           but the position:relative was for the nav panel. */
+        position: relative; /* Ensures mobile nav panel positions correctly below */
+    }
+    
+    .hamburger-menu {
+        display: block; /* <<<< THIS SHOWS THE HAMBURGER ICON */
+    }
+    
+    nav#mainNav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 0;
+        z-index: 1000;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Added padding to transition */
+    }
+    
+    nav#mainNav.mobile-nav-open {
+        max-height: 500px;
+        padding: 15px 0; /* Add padding back when open */
+    }
+    
+    nav#mainNav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav#mainNav ul li {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* These rules go INSIDE @media (max-width: 768px), AFTER nav#mainNav ul li */
+
+nav#mainNav ul li a {
+    padding: 12px 20px;        /* Make links more tappable */
+    display: block;            /* Make entire area clickable */
+    width: 100%;               /* Take full width */
+    border-bottom: 1px solid #e0e0e0; /* Separator line */
+    color: #333;               /* Ensure readable link color */
+    text-decoration: none;     /* Remove underline if present from base 'a' styles */
+}
+
+nav#mainNav ul li:last-child a {
+    border-bottom: none; /* No border for the last item */
+}
+
+/* Ensure this rule for the "Try Now" button is also present in this media query */
+header .btn-primary.header-try-now { /* Or just header .btn-primary if you didn't add header-try-now class */
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+    nav#mainNav ul li a {
+        padding: 12px 20px;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #e0e0e0;
+        color: #333;
+    }
+    
+    nav#mainNav ul li:last-child a {
+        border-bottom: none;
+    }
+    
+    /* This rule for the Try Now button should already be in your 768px media query from previous steps */
+    header .btn-primary.header-try-now { /* Or just header .btn-primary */
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    header .btn-primary { /* The "Try Now" button in header */
+        /* display: none; /* Option: hide it to simplify header */
+        padding: 8px 15px; /* Option: make it smaller */
+        font-size: 14px;
+    }
+    .logo {
+        font-size: 24px; /* Slightly smaller logo */
+    }
+    .logo span.logo-ai {
+        font-size: 14px;
+        padding: 2px 7px;
+    }
+
+    /* Hero Section Adjustments */
+    .hero h1 {
+        font-size: 36px; /* Smaller main headline */
+    }
+    .hero p {
+        font-size: 16px; /* Smaller paragraph text */
+    }
+    .hero-images {
+        flex-direction: column; /* Stack parent & baby images vertically */
+        gap: 25px; /* Adjust gap for vertical stacking */
+    }
+
+    /* How It Works Section Adjustments */
+    .how-it-works h2 {
+        font-size: 30px;
+    }
+    .steps-text-descriptions {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        max-width: 90%;
+    }
+    .step-description {
+        max-width: 100%;
+    }
+
+    .hero-images img { /* Parent and baby images */
+        max-width: 200px; /* Make images a bit smaller */
+    }
+    div.hero-images img.hero-arrow-image { /* Arrow image */
+        transform: rotate(90deg); /* Rotate arrow to point down */
+        width: 40px; /* Maybe make arrow smaller */
+    }
+    .btn-large { /* Hero button "Upload Your Photos" */
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    /* More adjustments will go here as we cover other sections */
+}
+
+
+/* Extra small screens (e.g., mobile phones in portrait) - Breakpoint: 576px (or 480px) */
+@media (max-width: 576px) {
+    body {
+        font-size: 15px; /* Slightly smaller base font for very small screens */
+    }
+    .container {
+        padding: 0 15px; /* Reduce side padding further */
+    }
+
+    /* Header adjustments for very small screens */
+    .logo {
+        font-size: 20px;
+    }
+    .logo span.logo-ai {
+        font-size: 12px;
+        padding: 2px 6px;
+    }
+    /* Optional: if you want to hide "Try Now" button on very small screens
+    header .btn-primary {
+        display: none;
+    }
+    header .container { // If "Try Now" is hidden, you might center the logo
+        justify-content: center;
+    }
+    */
+
+    /* Hero Section Adjustments for very small screens */
+    .hero {
+        padding: 40px 0; /* Reduce hero padding */
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+    .hero p {
+        font-size: 15px;
+    }
+    .hero-images img { /* Parent and baby images */
+        max-width: 180px;
+    }
+    div.hero-images img.hero-arrow-image { /* Arrow image */
+        width: 35px;
+        /* transform: rotate(90deg); Should be inherited from 768px if not overridden */
+    }
+    .btn-large { /* Hero button "Upload Your Photos" */
+        padding: 12px 20px; /* Adjusted padding slightly */
+        font-size: 15px;  /* Adjusted font size slightly */
+    }
+
+
+    /* How It Works Section Adjustments for very small screens */
+    .how-it-works h2 {
+        font-size: 26px;
+    }
+    /* .steps-text-descriptions flex-direction: column already from 768px if not overridden */
+    .steps-text-descriptions {
+        gap: 20px; /* Adjust gap */
+        /* max-width: 90%; already from 768px if not overridden */
+    }
+    .step-description h3 {
+        font-size: 20px;
+    }
+    .step-description p {
+        font-size: 14px;
+    }
+
+
+    /* Packages Section Adjustments for very small screens */
+    .packages h2 {
+        font-size: 26px;
+    }
+    .packages-grid {
+        flex-direction: column; /* Explicitly stack cards vertically */
+        align-items: center;   /* Center the stacked cards */
+        gap: 30px;             /* Gap between stacked cards */
+    }
+    .package-card {
+        flex-basis: auto;   /* Reset flex-basis */
+        width: 95%;         /* Make cards take most of the width */
+        max-width: 380px;   /* Cap width */
+        padding: 20px;      /* Slightly reduce padding inside cards */
+    }
+    .package-card.popular {
+        transform: translateY(-5px); /* Can maintain a smaller lift */
+    }
+    .popular-badge {
+        font-size: 11px;
+        padding: 5px 10px;
+        top: -22px; /* Adjust badge position for smaller card padding */
+    }
+    .package-title {
+        font-size: 20px;
+    }
+    .package-price {
+        font-size: 26px;
+    }
+    .package-features li {
+        font-size: 14px;
+    }
+    /* Ensure buttons in cards are easily tappable */
+    .package-card .btn {
+        font-size: 15px; /* Match other small screen buttons */
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+} /* Closes @media (max-width: 576px) */
+/* Print Options Section Styles */
+.print-options {
+    padding: 60px 0;
+    background-color: #fff; /* White background */
+}
+
+.print-options h2 {
+    font-size: 36px;
+    color: #1e2a78;
+    margin-bottom: 15px;
+    text-align: center; /* Center the H2 */
+}
+
+/* Ensure global .section-subheading rule has text-align: center */
+
+.print-configurator {
+    max-width: 800px; /* Constrain width of the whole widget */
+    margin: 40px auto 0 auto; /* Center it and add top margin */
+    background-color: #fdfdff; /* Very light background */
+    border: 1px solid #e8e8f5;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Tabs */
+.print-tabs {
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e8e8f5;
+}
+
+.print-tab {
+    flex-grow: 1;
+    padding: 15px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    text-align: center;
+    margin-bottom: -1px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.print-tab:hover {
+    color: #1e2a78;
+}
+
+.print-tab.active {
+    color: #1e2a78;
+    border-bottom-color: #ef5da8;
+}
+
+/* Choice Groups */
+.choice-group {
+    margin-bottom: 30px;
+}
+
+.choice-group h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.options-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.option-button {
+    flex-grow: 1;
+    min-width: 120px;
+    padding: 15px 10px;
+    background-color: #fff;
+    border: 2px solid #e8e8f5;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    color: #555;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-button .price-display {
+    display: block;
+    font-size: 13px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.option-button:hover {
+    border-color: #cfcfe0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.option-button.active {
+    border-color: #ef5da8;
+    background-color: #fff0f7;
+    color: #1e2a78;
+    box-shadow: 0 3px 8px rgba(239, 93, 168, 0.1);
+}
+
+.option-button.active .price-display {
+    color: #ef5da8;
+}
+
+/* Selection Summary */
+.selection-summary {
+    border: 1px solid #e8e8f5;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #fff;
+}
+
+.selection-summary h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #e8e8f5;
+}
+
+.summary-details {
+    margin-bottom: 20px;
+}
+
+.selected-item {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.selected-item .checkmark {
+    color: #28a745;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.total-price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #e8e8f5;
+}
+
+.total-price-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+}
+
+.total-price-value {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1e2a78;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+}
