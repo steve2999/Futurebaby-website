@@ -452,10 +452,8 @@ div.hero-images img.hero-arrow-image {
     header .container {
         position: relative;
     }
-    /* Note: The 'header nav' rule below might be redundant if replaced by 'nav#mainNav' later,
-       but let's fix the syntax for now. */
-    header nav {
-        display: none; /* Fallback if needed, but nav#mainNav is more specific */
+    header nav { /* This should be overridden by nav#mainNav below if structure is right */
+         display: none; /* Fallback if needed, but nav#mainNav is more specific */
     }
     .hamburger-menu {
         display: block;
@@ -978,97 +976,5 @@ div.hero-images img.hero-arrow-image {
     width: 100%;
 }
 /* End of Print Options styles */
-/* Testimonials Section Styles */
-.testimonials {
-    padding: 60px 0;
-    background-color: #f8f9fa; /* Or a slightly different light background */
-}
 
-.testimonials h2 { /* Assuming similar style to other section titles */
-    font-size: 36px;
-    color: #1e2a78;
-    margin-bottom: 15px;
-    text-align: center;
-}
-/* .testimonials .section-subheading uses global style (ensure text-align: center) */
-
-.testimonial-grid {
-    display: flex;
-    justify-content: center; /* Center cards if they don't fill space */
-    align-items: stretch; /* Make cards same height */
-    gap: 30px;
-    margin-top: 50px;
-    flex-wrap: wrap; /* Allow cards to wrap */
-}
-
-.testimonial-card {
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 30px;
-    flex-basis: 300px; /* Starting width */
-    flex-grow: 1;
-    max-width: 350px; /* Max width */
-    box-shadow: 0 5px 25px rgba(0,0,0,0.07);
-    display: flex;
-    flex-direction: column;
-    text-align: left; /* Content within card is left-aligned */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* For hover effect */
-}
-
-.testimonial-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-}
-
-.testimonial-rating {
-    margin-bottom: 15px;
-    color: #ffc107; /* Gold color for stars */
-    font-size: 20px; /* Adjust star size */
-}
-
-.testimonial-rating .star {
-    margin-right: 2px; /* Small space between stars */
-}
-
-.testimonial-quote {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 25px;
-    font-style: italic; /* Make quote italic */
-    flex-grow: 1; /* Allow quote to take up space */
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center; /* Vertically align avatar and text */
-    margin-top: auto; /* Push author to bottom if quote varies height */
-    padding-top: 20px; /* Space above author */
-    border-top: 1px solid #eee; /* Separator line */
-}
-
-.author-avatar {
-    width: 100px;       /* <<< SET AVATAR DISPLAY SIZE HERE */
-    height: 100px;      /* <<< SET AVATAR DISPLAY SIZE HERE */
-    border-radius: 50%; /* Make it circular */
-    margin-right: 15px; /* Space between avatar and text */
-    object-fit: cover; /* Ensures image covers the area without distortion */
-}
-
-.author-info {
-    display: flex;
-    flex-direction: column; /* Stack name and location */
-}
-
-.author-name {
-    font-size: 15px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 2px;
-}
-
-.author-location {
-    font-size: 13px;
-    color: #777;
-}
 /* Make sure there are no stray characters or braces after this point */

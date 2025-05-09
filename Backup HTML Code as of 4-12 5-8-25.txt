@@ -178,7 +178,7 @@ section -->
                         </div>
                         <div class="total-price-container">
                             <span class="total-price-label">Total Price</span>
-                            <span class="total-price-value">$12.95</span> 
+                            <span class="total-price-value">$12.95</span>
                         </div>
                         <button class="btn btn-primary btn-large add-to-cart-btn">Add to Cart</button>
                     </div>
@@ -191,71 +191,3 @@ section -->
 <script src="script.js"></script>
 </body>
 </html>
-<section class="testimonials">
-    <div class="container">
-        <h2>Happy Parents Share Their Joy</h2>
-        <p class="section-subheading">Discover what other expectant and future parents have to say about their experience.</p>
-
-        <div class="testimonial-grid">
-            <!-- Testimonial Card 1 -->
-            <div class="testimonial-card">
-                <div class="testimonial-rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="testimonial-quote">"We were amazed at how much the image resembled our actual baby when she was born! The AI technology is truly remarkable."</p>
-                <div class="testimonial-author">
-                    <img src="images/avatar-sarah-michael.png" alt="Avatar for Sarah & Michael" class="author-avatar">
-                    <div class="author-info">
-                        <span class="author-name">Sarah & Michael</span>
-                        <span class="author-location">Boston, MA</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial Card 2 -->
-            <div class="testimonial-card">
-                <div class="testimonial-rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="testimonial-quote">"Such a special keepsake during our pregnancy journey. We framed both the boy and girl versions and can't wait to see which one our baby will resemble!"</p>
-                <div class="testimonial-author">
-                    <img src="images/avatar-jessica-david.png" alt="Avatar for Jessica & David" class="author-avatar">
-                    <div class="author-info">
-                        <span class="author-name">Jessica & David</span>
-                        <span class="author-location">Portland, OR</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial Card 3 -->
-            <div class="testimonial-card">
-                <div class="testimonial-rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="testimonial-quote">"The free eBook was incredibly helpful for us as first-time parents. And the baby image was so adorable, we immediately upgraded to the premium version."</p>
-                <div class="testimonial-author">
-                    <img src="images/avatar-emma-james.png" alt="Avatar for Emma & James" class="author-avatar">
-                    <div class="author-info">
-                        <span class="author-name">Emma & James</span>
-                        <span class="author-location">Austin, TX</span>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- .testimonial-grid -->
-    </div> <!-- .container -->
-</section>
-
-<!-- Other sections will go here -->
-</main>
