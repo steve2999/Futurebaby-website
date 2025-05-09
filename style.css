@@ -742,6 +742,35 @@ div.hero-images img.hero-arrow-image {
     .total-price-label {
         font-size: 15px;
     }
+    /* Testimonials Adjustments for very small screens */
+    .testimonials h2 {
+        font-size: 26px;
+    }
+    .testimonial-grid {
+        flex-direction: column; /* Stack cards */
+        align-items: center;   /* Center stacked cards */
+        gap: 30px;
+    }
+    .testimonial-card {
+        flex-basis: auto;   /* Reset flex-basis */
+        width: 95%;         /* Cards take most of width */
+        max-width: 380px;   /* Cap width */
+        padding: 20px;
+    }
+    .testimonial-quote {
+        font-size: 15px; /* Smaller quote text */
+    }
+    .author-avatar {
+        width: 60px; /* Further reduced avatar size */
+        height: 60px;
+        margin-right: 10px; /* Reduce space */
+    }
+    .author-name {
+        font-size: 14px;
+    }
+    .author-location {
+        font-size: 12px;
+    }
     .total-price-value {
         font-size: 19px;
     }
