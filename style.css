@@ -1045,3 +1045,132 @@ div.hero-images img.hero-arrow-image {
     color: #777;
 }
 /* Make sure there are no stray characters or braces after this point */
+/* E-book CTA Section Styles */
+.ebook-cta {
+    padding: 60px 0;
+    background-color: #f8f0fc; /* Light lavender background, similar to hero */
+}
+
+.ebook-cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 50px; /* Increased Space between columns */
+    align-items: flex-start; /* Align items to the top of grid cells */
+}
+
+.ebook-cta-content {
+    /* Styles for the left column */
+}
+
+.ebook-badge {
+    display: inline-block;
+    background-color: #e0f2fe; /* Light blue */
+    color: #0c547e; /* Darker blue text */
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.ebook-cta-content h2 {
+    font-size: 32px; /* Adjust as needed */
+    color: #1e2a78; /* Dark blue */
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+/* .ebook-cta-content .section-subheading is styled globally */
+
+.ebook-features {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 25px 0;
+}
+
+.ebook-features li {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.ebook-features .checkmark {
+    color: #28a745; /* Green checkmark */
+    margin-right: 8px;
+    font-weight: bold;
+    line-height: 1.3; /* Align checkmark with text */
+}
+
+.ebook-form input[type="text"],
+.ebook-form input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    box-sizing: border-box; /* Ensure padding doesn't add to width */
+}
+
+.ebook-form button { /* Reuses .btn .btn-primary .btn-large */
+    width: 100%;
+}
+
+.ebook-disclaimer {
+    font-size: 12px;
+    color: #777;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Right Column: Images */
+.ebook-cta-images {
+    display: flex;
+    flex-direction: column; /* Stack main image and secondary image */
+    gap: 30px; /* Increased Space between the two image blocks */
+    align-items: center; /* Center items if they don't fill width */
+}
+
+.image-showcase {
+    position: relative; /* For positioning the quote bubble */
+    max-width: 380px; /* Control size of this image block */
+    width: 100%;
+    margin: 0 auto; /* Center the showcase block */
+}
+
+.ebook-main-image { /* Child with book */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: block; /* Remove extra space below image */
+}
+
+.image-quote-bubble {
+    position: absolute;
+    bottom: 20px; /* Position from bottom of image-showcase */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    width: calc(100% - 40px); /* Width relative to showcase, with padding */
+    max-width: 300px; /* Max width for the bubble */
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+.ebook-secondary-image { /* Parents with tablet */
+    width: 100%;
+    max-width: 380px; /* Match width of above image block if desired */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: block; /* Remove extra space below image */
+    margin: 0 auto; /* Center the image */
+}
