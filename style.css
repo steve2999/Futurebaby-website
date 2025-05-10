@@ -115,13 +115,13 @@ nav ul li a:hover {
 }
 
 .btn-primary {
-    background-color: #ef5da8; /* Pink color */
+    background-color: #d9368f; /* Pink color */
     color: white;
     border: none;
 }
 
 .btn-primary:hover {
-    background-color: #d6408b; /* Darker pink on hover */
+    background-color: #0906adf9; /* Darker pink on hover */
     transform: translateY(-2px) scale(1.01); /* EXPLICITLY ADDED */
 }
 
@@ -1074,10 +1074,10 @@ div.hero-images img.hero-arrow-image {
 }
 
 .ebook-cta-content h2 {
-    font-size: 32px; /* Adjust as needed */
+    font-size: 36px; /* Adjust as needed */
     color: #1e2a78; /* Dark blue */
-    line-height: 1.3;
-    margin-bottom: 15px;
+    line-height: 1.35;
+    margin-bottom: 20px;
 }
 /* .ebook-cta-content .section-subheading is styled globally */
 
@@ -1088,9 +1088,9 @@ div.hero-images img.hero-arrow-image {
 }
 
 .ebook-features li {
-    font-size: 15px;
-    color: #444;
-    margin-bottom: 10px;
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 12px;
     display: flex;
     align-items: flex-start;
 }
@@ -1119,7 +1119,7 @@ div.hero-images img.hero-arrow-image {
 
 .ebook-disclaimer {
     font-size: 12px;
-    color: #777;
+    color: #666;
     margin-top: 15px;
     text-align: center;
 }
@@ -1128,13 +1128,13 @@ div.hero-images img.hero-arrow-image {
 .ebook-cta-images {
     display: flex;
     flex-direction: column; /* Stack main image and secondary image */
-    gap: 30px; /* Increased Space between the two image blocks */
+    gap: 20px; /* Increased Space between the two image blocks */
     align-items: center; /* Center items if they don't fill width */
 }
 
 .image-showcase {
     position: relative; /* For positioning the quote bubble */
-    max-width: 380px; /* Control size of this image block */
+    max-width: 320px; /* Control size of this image block */
     width: 100%;
     margin: 0 auto; /* Center the showcase block */
 }
@@ -1152,12 +1152,12 @@ div.hero-images img.hero-arrow-image {
     bottom: 20px; /* Position from bottom of image-showcase */
     left: 50%;
     transform: translateX(-50%);
-    background-color: #fff;
-    padding: 15px 20px;
+    background-color: #1e2a78;
+    padding: 12px 18px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    font-size: 14px;
-    color: #333;
+    font-size: 16px;
+    color: #fff;
     text-align: center;
     width: calc(100% - 40px); /* Width relative to showcase, with padding */
     max-width: 300px; /* Max width for the bubble */
@@ -1167,7 +1167,7 @@ div.hero-images img.hero-arrow-image {
 
 .ebook-secondary-image { /* Parents with tablet */
     width: 100%;
-    max-width: 380px; /* Match width of above image block if desired */
+    max-width: 320px; /* Match width of above image block if desired */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
