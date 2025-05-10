@@ -455,7 +455,7 @@ div.hero-images img.hero-arrow-image {
     /* Note: The 'header nav' rule below might be redundant if replaced by 'nav#mainNav' later,
        but let's fix the syntax for now. */
     header nav {
-        display: none; /* Fallback if needed, but nav#mainNav is more specific */
+        display: n one; /* Fallback if needed, but nav#mainNav is more specific */
     }
     .hamburger-menu {
         display: block;
@@ -602,6 +602,81 @@ div.hero-images img.hero-arrow-image {
 .author-avatar {
     width: 80px; /* Adjusted avatar size */
     height: 80px;
+}
+/* E-book CTA Adjustments */
+.ebook-cta-grid {
+    display: flex;          /* Use flexbox for ordering */
+    flex-direction: column; /* Stack items vertically */
+    gap: 25px;              /* Gap between the main stacked blocks */
+}
+
+/* Remove width/max-width from direct children of the flex container
+   as flex items will behave differently. Let them be sized by content
+   or more specific rules below if needed. */
+.ebook-cta-content,
+.ebook-cta-images {
+    width: 100%; /* Ensure they can take full width if content pushes them */
+}
+
+/* Make .ebook-cta-content also a flex container to order its children */
+.ebook-cta-content {
+    display: flex;
+    flex-direction: column;
+    /* order for .ebook-cta-content itself will be default (0) or set by its parent if needed */
+    text-align: center; /* Center align text content for mobile */
+}
+
+/* Ordering for items within .ebook-cta-grid and .ebook-cta-content */
+.ebook-headline-group { /* Child of .ebook-cta-content */
+    order: 1; /* Headline block first within its parent */
+    width: 100%;
+}
+
+.ebook-cta-images { /* Child of .ebook-cta-grid */
+    order: 2; /* Images block second in the main stack */
+    display: flex; /* To manage its own children if needed, or just for consistency */
+    flex-direction: column;
+    align-items: center; /* Center images within this block */
+    gap: 20px; /* Gap between the two images */
+}
+
+.ebook-main-text-group { /* Child of .ebook-cta-content */
+    order: 3; /* Rest of the text block third within its parent */
+    width: 100%;
+}
+
+/* Specific element styling within the new order */
+.ebook-cta-content h2 {
+    font-size: 28px;
+}
+
+.ebook-features {
+    display: inline-block; /* To allow centering via text-align on parent */
+    text-align: left;     /* Keep list items left-aligned */
+    padding-left: 0;
+    margin-top: 20px;     /* Add some space */
+    margin-bottom: 20px;  /* Add some space */
+}
+
+.ebook-features li {
+    font-size: 15px;
+}
+
+.image-showcase,
+.ebook-secondary-image {
+    max-width: 350px; /* Max width for the image containers */
+    width: 100%;      /* Make them responsive within their container */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-quote-bubble {
+    width: auto;
+    min-width: 200px;
+    max-width: 90%;
+    font-size: 14px;
+    padding: 12px 18px;
+    bottom: 15px;
 }
 } /* End of @media (max-width: 768px) */
 
